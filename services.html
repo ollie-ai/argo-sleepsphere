@@ -2,8 +2,15 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 <style>
+.fas { font-weight: 900; }
+:root
+<style>
+.fa, .fas, .far, .fal, .fab { font-weight: 900; }
 :root { --primary: #3b82f6; --primary-dark: #2563eb; --primary-light: #dbeafe; --secondary: #1e3a8a; --accent: #60a5fa; --bg: #f8fafc; --bg-alt: #f1f5f9; --card-bg: #ffffff; --text: #1e293b; --text-light: #64748b; --border: #e2e8f0; }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -17,7 +24,7 @@ a:hover { color: var(--primary-dark); }
 .btn-secondary:hover { background: var(--primary-light); }
 .btn-white { background: white; color: var(--primary); }
 .btn-white:hover { background: var(--bg-alt); }
-section { padding: 100px 0; }
+section { padding: 80px 0; }
 .section-header { text-align: center; margin-bottom: 60px; }
 .section-header h2 { font-size: 2.75rem; font-weight: 800; margin-bottom: 16px; color: var(--secondary); }
 .section-header p { font-size: 1.2rem; color: var(--text-light); max-width: 650px; margin: 0 auto; }
@@ -135,9 +142,9 @@ nav { position: fixed; top: 0; left: 0; right: 0; background: rgba(255,255,255,0
 .cta-section h2 { color: var(--secondary); margin-bottom: 16px; }
 .cta-section p { color: var(--text-light); margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto; }
 
-footer { background: #0f172a; color: white; padding: 80px 0 0; }
+footer { background: #0f172a; color: white; padding: 0; }
 footer::before { content: ''; display: block; height: 5px; background: linear-gradient(90deg, var(--primary), var(--accent)); }
-.footer-main { max-width: 1200px; margin: 0 auto; padding: 60px 24px; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px; }
+.footer-main { max-width: 1200px; margin: 0 auto; padding: 60px 24px 40px; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 50px; }
 .footer-brand { padding-right: 40px; }
 .footer-brand h3 { font-size: 1.5rem; margin-bottom: 20px; }
 .footer-brand p { opacity: 0.7; margin-bottom: 24px; line-height: 1.7; }
