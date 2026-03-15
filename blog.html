@@ -2,8 +2,15 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 <style>
+.fas { font-weight: 900; }
+:root
+<style>
+.fa, .fas, .far, .fal, .fab { font-weight: 900; }
 :root { --primary: #3b82f6; --primary-dark: #2563eb; --primary-light: #dbeafe; --secondary: #1e3a8a; --accent: #60a5fa; --bg: #f8fafc; --bg-alt: #f1f5f9; --card-bg: #ffffff; --text: #1e293b; --text-light: #64748b; --border: #e2e8f0; }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -17,7 +24,7 @@ a:hover { color: var(--primary-dark); }
 .btn-secondary:hover { background: var(--primary-light); }
 .btn-white { background: white; color: var(--primary); }
 .btn-white:hover { background: var(--bg-alt); }
-section { padding: 100px 0; }
+section { padding: 80px 0; }
 .section-header { text-align: center; margin-bottom: 60px; }
 .section-header h2 { font-size: 2.75rem; font-weight: 800; margin-bottom: 16px; color: var(--secondary); }
 .section-header p { font-size: 1.2rem; color: var(--text-light); max-width: 650px; margin: 0 auto; }
@@ -135,9 +142,9 @@ nav { position: fixed; top: 0; left: 0; right: 0; background: rgba(255,255,255,0
 .cta-section h2 { color: var(--secondary); margin-bottom: 16px; }
 .cta-section p { color: var(--text-light); margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto; }
 
-footer { background: #0f172a; color: white; padding: 80px 0 0; }
+footer { background: #0f172a; color: white; padding: 0; }
 footer::before { content: ''; display: block; height: 5px; background: linear-gradient(90deg, var(--primary), var(--accent)); }
-.footer-main { max-width: 1200px; margin: 0 auto; padding: 60px 24px; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px; }
+.footer-main { max-width: 1200px; margin: 0 auto; padding: 60px 24px 40px; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 50px; }
 .footer-brand { padding-right: 40px; }
 .footer-brand h3 { font-size: 1.5rem; margin-bottom: 20px; }
 .footer-brand p { opacity: 0.7; margin-bottom: 24px; line-height: 1.7; }
@@ -158,7 +165,7 @@ footer::before { content: ''; display: block; height: 5px; background: linear-gr
 <a href="contact.html" class="btn nav-cta">Get Started</a>
 </div></nav>
 <section class="alt-hero"><div class="container"><h1>Blog</h1><p>Latest articles and updates</p></div></section>
-<section><div class="container"><div class="product-grid"><div class="product-card"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop" alt="Getting Started Guide" class="product-image"><div class="product-content"><div style="color:var(--primary);font-weight:600;margin-bottom:8px">12 March 2026</div><h3>Getting Started Guide</h3><p>Everything you need to know to begin your journey.</p><a href="#" style="font-weight:600">Read More <i class="fas fa-arrow-right"></i></a></div></div><div class="product-card"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=450&fit=crop" alt="Top 10 Tips" class="product-image"><div class="product-content"><div style="color:var(--primary);font-weight:600;margin-bottom:8px">8 March 2026</div><h3>Top 10 Tips</h3><p>Expert advice to help you succeed.</p><a href="#" style="font-weight:600">Read More <i class="fas fa-arrow-right"></i></a></div></div><div class="product-card"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=450&fit=crop" alt="Case Study" class="product-image"><div class="product-content"><div style="color:var(--primary);font-weight:600;margin-bottom:8px">1 March 2026</div><h3>Case Study</h3><p>See how others achieved great results.</p><a href="#" style="font-weight:600">Read More <i class="fas fa-arrow-right"></i></a></div></div><div class="product-card"><img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?w=800&h=450&fit=crop" alt="Industry News" class="product-image"><div class="product-content"><div style="color:var(--primary);font-weight:600;margin-bottom:8px">25 February 2026</div><h3>Industry News</h3><p>Stay updated with the latest trends.</p><a href="#" style="font-weight:600">Read More <i class="fas fa-arrow-right"></i></a></div></div><div class="product-card"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop" alt="Beginner's Guide" class="product-image"><div class="product-content"><div style="color:var(--primary);font-weight:600;margin-bottom:8px">20 February 2026</div><h3>Beginner's Guide</h3><p>A comprehensive guide for newcomers.</p><a href="#" style="font-weight:600">Read More <i class="fas fa-arrow-right"></i></a></div></div><div class="product-card"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=450&fit=crop" alt="Advanced Strategies" class="product-image"><div class="product-content"><div style="color:var(--primary);font-weight:600;margin-bottom:8px">15 February 2026</div><h3>Advanced Strategies</h3><p>Take your results to the next level.</p><a href="#" style="font-weight:600">Read More <i class="fas fa-arrow-right"></i></a></div></div></div></div></section>
+<section><div class="container"><div class="product-grid"><div class="product-card"><img src="https://images.unsplash.com/photo-1519824145371-296894a0daa9?w=800&h=450&fit=crop" alt="10 Tips for Better Sleep in 2026" class="product-image"><div class="product-content"><div style="color:var(--primary);font-weight:600;margin-bottom:8px">14 March 2026</div><h3>10 Tips for Better Sleep in 2026</h3><p>Transform your sleep quality with these proven strategies.</p><a href="article_1.html" style="font-weight:600">Read More <i class="fas fa-arrow-right"></i></a></div></div><div class="product-card"><img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&h=450&fit=crop" alt="How Sleep Affects Your Mental Health" class="product-image"><div class="product-content"><div style="color:var(--primary);font-weight:600;margin-bottom:8px">12 March 2026</div><h3>How Sleep Affects Your Mental Health</h3><p>Discover the crucial connection between sleep and mental wellbeing.</p><a href="article_2.html" style="font-weight:600">Read More <i class="fas fa-arrow-right"></i></a></div></div><div class="product-card"><img src="https://images.unsplash.com/photo-1531353826977-0941b4779a1c?w=800&h=450&fit=crop" alt="The Science Behind Sleep Cycles" class="product-image"><div class="product-content"><div style="color:var(--primary);font-weight:600;margin-bottom:8px">8 March 2026</div><h3>The Science Behind Sleep Cycles</h3><p>Understanding your circadian rhythm for optimal rest.</p><a href="article_3.html" style="font-weight:600">Read More <i class="fas fa-arrow-right"></i></a></div></div><div class="product-card"><img src="https://images.unsplash.com/photo-1522771753035-4850d32f7195?w=800&h=450&fit=crop" alt="Best Sleep Products for Better Rest" class="product-image"><div class="product-content"><div style="color:var(--primary);font-weight:600;margin-bottom:8px">5 March 2026</div><h3>Best Sleep Products for Better Rest</h3><p>Our top picks for improving your sleep environment.</p><a href="article_4.html" style="font-weight:600">Read More <i class="fas fa-arrow-right"></i></a></div></div><div class="product-card"><img src="https://images.unsplash.com/photo-1520206183501-b80df61043c2?w=800&h=450&fit=crop" alt="How to Create the Perfect Sleep Environment" class="product-image"><div class="product-content"><div style="color:var(--primary);font-weight:600;margin-bottom:8px">1 March 2026</div><h3>How to Create the Perfect Sleep Environment</h3><p>Optimise your bedroom for the best possible sleep.</p><a href="article_5.html" style="font-weight:600">Read More <i class="fas fa-arrow-right"></i></a></div></div><div class="product-card"><img src="https://images.unsplash.com/photo-1511296933631-18b5f0bc084c?w=800&h=450&fit=crop" alt="Sleep Hygiene: What Actually Works" class="product-image"><div class="product-content"><div style="color:var(--primary);font-weight:600;margin-bottom:8px">25 February 2026</div><h3>Sleep Hygiene: What Actually Works</h3><p>Evidence-based tips for improving your sleep habits.</p><a href="article_6.html" style="font-weight:600">Read More <i class="fas fa-arrow-right"></i></a></div></div></div></div></section>
 <section class="newsletter"><div class="container"><h2>Never Miss a Post</h2><p>Subscribe to get the latest articles delivered to your inbox.</p><form class="newsletter-form"><input type="email" placeholder="Enter your email" required><button type="submit">Subscribe</button></form></div></section>
 
 <footer>
