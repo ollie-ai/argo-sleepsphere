@@ -41,6 +41,9 @@
         .article-content { max-width: 800px; margin: 0 auto; font-size: 1.15rem; }
         .article-content h2 { font-size: 1.8rem; color: var(--secondary); margin: 48px 0 24px; font-weight: 700; }
         .article-content p { margin-bottom: 24px; color: var(--text); }
+        .article-nav { max-width: 800px; margin: 0 auto 40px; }
+        .back-to-blog { display: inline-flex; align-items: center; gap: 8px; color: var(--primary); font-weight: 600; padding: 12px 24px; background: var(--primary-light); border-radius: 10px; }
+        .back-to-blog:hover { background: var(--primary); color: white; }
         
         /* CTA Box */
         .cta-box { background: linear-gradient(135deg, var(--secondary), var(--primary-dark)); color: white; padding: 48px; border-radius: 20px; text-align: center; margin: 48px 0; max-width: 800px; margin-left: auto; margin-right: auto; }
@@ -52,6 +55,10 @@
         .newsletter { background: linear-gradient(135deg, var(--secondary), var(--primary-dark)); color: white; padding: 80px 24px; text-align: center; }
         .newsletter h2 { margin-bottom: 16px; font-size: 2rem; }
         .newsletter p { opacity: 0.9; margin-bottom: 32px; }
+        .newsletter-form { display: flex; gap: 16px; justify-content: center; max-width: 520px; margin: 0 auto; flex-wrap: wrap; }
+        .newsletter-form input { flex: 1; min-width: 260px; padding: 16px 24px; border: none; border-radius: 12px; font-size: 1rem; }
+        .newsletter-form button { padding: 16px 32px; background: var(--primary); color: white; border: none; border-radius: 12px; font-weight: 600; font-size: 1rem; cursor: pointer; transition: all 0.3s; }
+        .newsletter-form button:hover { background: var(--primary-dark); transform: translateY(-2px); }
         
         /* Footer - Full site style */
         footer { background: #0f172a; color: white; padding: 0; }
@@ -127,6 +134,10 @@
 <p>Your body needs to cool down for sleep. Keep your bedroom cool, wear breathable sleepwear, and avoid heavy bedding. A slightly cool room is better than a warm one.</p>
             </div>
             
+            <div class="article-nav">
+                <a href="blog.html" class="back-to-blog"><i class="fas fa-arrow-left"></i> Back to Blog</a>
+            </div>
+            
             <div class="cta-box">
                 <h3>Ready to Make a Change?</h3>
                 <p>Get personalized advice and recommendations tailored to your lifestyle.</p>
@@ -139,6 +150,10 @@
         <div class="container">
             <h2>Never Miss a Post</h2>
             <p>Subscribe to get the latest articles delivered to your inbox.</p>
+            <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
         </div>
     </section>
     
