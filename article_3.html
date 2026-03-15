@@ -10,70 +10,104 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <style>
-        :root {
-            --primary: #10b981;
-            --primary-dark: #059669;
-            --secondary: #064e3b;
-            --bg: #f8fafc;
-            --text: #1e293b;
-            --text-light: #64748b;
-        }
+        .fa, .fas, .far, .fal, .fab { font-weight: 900; }
+        :root { --primary: #3b82f6; --primary-dark: #2563eb; --primary-light: #dbeafe; --secondary: #1e3a8a; --accent: #60a5fa; --bg: #f8fafc; --bg-alt: #f1f5f9; --card-bg: #ffffff; --text: #1e293b; --text-light: #64748b; --border: #e2e8f0; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.8; }
-        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        a { color: var(--primary); text-decoration: none; transition: 0.2s; }
+        a:hover { color: var(--primary-dark); }
         
-        nav { background: white; padding: 20px 0; border-bottom: 1px solid #e2e8f0; }
-        nav .container { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-weight: 800; font-size: 1.4rem; color: var(--secondary); text-decoration: none; }
-        .nav-links a { color: var(--text); text-decoration: none; margin-left: 24px; font-weight: 500; }
+        /* Navigation - Full site style */
+        nav { position: fixed; top: 0; left: 0; right: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(20px); z-index: 1000; border-bottom: 1px solid rgba(0,0,0,0.06); }
+        .nav-inner { display: flex; justify-content: space-between; align-items: center; padding: 16px 40px; max-width: 1400px; margin: 0 auto; }
+        .logo { font-weight: 800; font-size: 1.4rem; color: var(--secondary); text-decoration: none; display: flex; align-items: center; gap: 12px; }
+        .logo-icon { width: 44px; height: 44px; background: linear-gradient(135deg, var(--primary), var(--accent)); border-radius: 14px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 800; font-size: 1.3rem; }
+        .nav-links { display: flex; gap: 32px; list-style: none; align-items: center; }
+        .nav-links a { color: var(--text); text-decoration: none; font-weight: 500; font-size: 0.95rem; transition: 0.2s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--primary); }
+        .nav-cta { background: var(--primary); color: white !important; padding: 12px 28px; border-radius: 12px; font-weight: 600; }
         
-        article { padding: 60px 0; }
-        .article-header { text-align: center; margin-bottom: 48px; }
-        .article-meta { color: var(--primary); font-weight: 600; margin-bottom: 16px; }
-        h1 { font-size: 2.5rem; font-weight: 800; color: var(--secondary); margin-bottom: 24px; line-height: 1.2; }
-        .article-content { font-size: 1.1rem; }
-        .article-content h2 { font-size: 1.8rem; color: var(--secondary); margin: 48px 0 24px; }
-        .article-content p { margin-bottom: 24px; }
+        /* Article Hero */
+        .alt-hero { background: var(--secondary); padding: 180px 40px 80px; text-align: center; color: white; }
+        .alt-hero h1 { font-size: 3.5rem; font-weight: 800; margin-bottom: 20px; }
+        .article-meta { color: var(--accent); font-weight: 600; margin-bottom: 8px; font-size: 1.1rem; }
         
-        .cta-box { background: linear-gradient(135deg, var(--secondary), var(--primary-dark)); color: white; padding: 48px; border-radius: 20px; text-align: center; margin: 48px 0; }
+        /* Article Content */
+        article { padding: 80px 0; }
+        .article-content { max-width: 800px; margin: 0 auto; font-size: 1.15rem; }
+        .article-content h2 { font-size: 1.8rem; color: var(--secondary); margin: 48px 0 24px; font-weight: 700; }
+        .article-content p { margin-bottom: 24px; color: var(--text); }
+        
+        /* CTA Box */
+        .cta-box { background: linear-gradient(135deg, var(--secondary), var(--primary-dark)); color: white; padding: 48px; border-radius: 20px; text-align: center; margin: 48px 0; max-width: 800px; margin-left: auto; margin-right: auto; }
         .cta-box h3 { font-size: 1.8rem; margin-bottom: 16px; }
         .cta-box p { opacity: 0.9; margin-bottom: 24px; }
         .cta-box a { display: inline-block; background: white; color: var(--primary); padding: 16px 32px; border-radius: 12px; text-decoration: none; font-weight: 600; }
         
-        footer { background: #0f172a; color: white; padding: 48px 0; text-align: center; }
-        footer p { opacity: 0.7; }
+        /* Newsletter */
+        .newsletter { background: linear-gradient(135deg, var(--secondary), var(--primary-dark)); color: white; padding: 80px 24px; text-align: center; }
+        .newsletter h2 { margin-bottom: 16px; font-size: 2rem; }
+        .newsletter p { opacity: 0.9; margin-bottom: 32px; }
+        
+        /* Footer - Full site style */
+        footer { background: #0f172a; color: white; padding: 0; }
+        footer::before { content: ''; display: block; height: 5px; background: linear-gradient(90deg, var(--primary), var(--accent)); }
+        .footer-main { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; padding: 60px 40px; max-width: 1400px; margin: 0 auto; }
+        .footer-brand h3 { font-size: 1.4rem; margin-bottom: 12px; }
+        .footer-brand p { opacity: 0.7; margin-bottom: 20px; }
+        .social-links { display: flex; gap: 16px; }
+        .social-links a { width: 44px; height: 44px; background: rgba(255,255,255,0.1); color: white; border-radius: 12px; display: flex; align-items: center; justify-content: center; transition: all 0.3s; }
+        .social-links a:hover { background: var(--primary); transform: translateY(-3px); }
+        .footer-col h4 { font-size: 1.1rem; margin-bottom: 20px; color: white; }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 12px; }
+        .footer-col a { color: rgba(255,255,255,0.7); transition: 0.2s; }
+        .footer-col a:hover { color: white; }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding: 24px 40px; text-align: center; }
+        .footer-bottom p { opacity: 0.6; font-size: 0.9rem; }
+        
+        @media (max-width: 768px) {
+            .footer-main { grid-template-columns: 1fr; gap: 32px; padding: 40px 24px; }
+            .alt-hero { padding: 160px 24px 60px; }
+            .alt-hero h1 { font-size: 2.2rem; }
+            .nav-links { display: none; }
+        }
     </style>
 </head>
 <body>
     <nav>
-        <div class="container">
-            <a href="index.html" class="logo">SleepSphere</a>
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="services.html">Services</a>
-                <a href="blog.html">Blog</a>
-                <a href="faq.html">FAQ</a>
-                <a href="contact.html">Contact</a>
-            </div>
+        <div class="nav-inner">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">S</div>
+                SleepSphere
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html" class="nav-cta">Get Started</a></li>
+            </ul>
         </div>
     </nav>
     
+    <section class="alt-hero">
+        <div class="container">
+            <div class="article-meta">15 March 2026</div>
+            <h1>The Science Behind Sleep Cycles</h1>
+        </div>
+    </section>
+    
     <article>
         <div class="container">
-            <header class="article-header">
-                <div class="article-meta">15 March 2026</div>
-                <h1>The Science Behind Sleep Cycles</h1>
-            </header>
-            
             <div class="article-content">
-                <p>Sleep isn't uniform - it's a complex cycle of different stages.</h2><p></p><h2>The Circadian Rhythm
-Your body's internal clock regulates sleep-wake cycles.</h2><p></p><h2>Sleep Stages
-- Light Sleep: The transition phase
-- Deep Sleep: Restoration and repair
-- REM Sleep: Dreaming and memory consolidation</h2><p></p><h2>Why Cycles Matter
-Completing multiple sleep cycles is more important than total hours.</h2><p></p><h2>Optimising Your Cycles
-Maintain consistent sleep and wake times. Allow 7-9 hours.</h2></p>
+                <p>Sleep is a complex cycle of different stages.</h2><p><h2>The Circadian Rhythm
+Your internal clock regulates sleep-wake cycles.</h2><p><h2>Sleep Stages
+Light sleep, deep sleep, and REM sleep.</h2><p><h2>Why Cycles Matter
+Completing multiple cycles is more important than total hours.</h2></p>
             </div>
             
             <div class="cta-box">
@@ -84,9 +118,54 @@ Maintain consistent sleep and wake times. Allow 7-9 hours.</h2></p>
         </div>
     </article>
     
-    <footer>
+    <section class="newsletter">
         <div class="container">
-            <p>&copy; 2026 SleepSphere. All rights reserved.</p>
+            <h2>Never Miss a Post</h2>
+            <p>Subscribe to get the latest articles delivered to your inbox.</p>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-main">
+            <div class="footer-brand">
+                <h3>SleepSphere</h3>
+                <p>Helping you achieve better sleep for a healthier life.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="mailto:hello@sleepsphere.co.uk">hello@sleepsphere.co.uk</a></li>
+                    <li><a href="#">+44 (0) 20 7946 0958</a></li>
+                    <li><a href="#">London, UK</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 SleepSphere. All rights reserved. Registered in the United Kingdom.</p>
         </div>
     </footer>
 </body>
