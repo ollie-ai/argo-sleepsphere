@@ -165,12 +165,33 @@ footer::before { content: ''; display: block; height: 5px; background: linear-gr
 <a href="contact.html" class="btn nav-cta">Get Started</a>
 </div></nav>
 <section class="hero"><div class="hero-content"><h1>Transform Your Sleep, Transform Your Life</h1><p>Get personalized sleep coaching and AI-powered recommendations to help you wake up refreshed and energised every morning.</p><div class="hero-buttons"><a href="#calculator" class="btn"><i class="fas fa-calculator"></i> Start Your Journey</a><a href="#how-it-works" class="btn btn-white">How It Works</a></div><div class="hero-stats"><div class="hero-stat"><div class="hero-stat-value">25M+</div><div class="hero-stat-label">Hours Tracked</div></div><div class="hero-stat"><div class="hero-stat-value">98%</div><div class="hero-stat-label">Improvement Rate</div></div><div class="hero-stat"><div class="hero-stat-value">4.9/5</div><div class="hero-stat-label">User Rating</div></div></div></div></section>
-<section id="calculator"><div class="container"><div class="section-header"><h2>Sleep Quality Score</h2><p>Discover your sleep quality score and get personalized recommendations</p></div><div class="calculator"><h3>Calculate Your Results</h3><div class="form-group"><label for="monthlySpend">Monthly Spending (£)</label><input type="number" id="monthlySpend" placeholder="Enter your spending amount" min="0"></div><div class="form-group"><label for="productCategory">Category</label><select id="productCategory"><option value="electronics">Electronics</option><option value="clothing">Clothing</option><option value="home">Home</option><option value="food">Food</option><option value="other">Other</option></select></div><button class="btn" onclick="calculateSavings()" style="width:100%"><i class="fas fa-calculator"></i> Calculate</button><div id="savingsResult" class="result" style="display:none"></div></div></div></section>
+<section id="calculator"><div class="container"><div class="section-header"><h2>Sleep Quality Score</h2><p>Discover your sleep quality score and get personalized recommendations</p></div><div class="calculator"><h3>Calculate Your Results</h3>
+<div class="form-group">
+    <label for="hoursSleep">Average Hours of Sleep</label>
+    <input type="number" id="hoursSleep" placeholder="Enter hours" min="0" max="24" step="0.5">
+</div>
+<div class="form-group">
+    <label for="sleepQuality">How do you feel in the morning?</label>
+    <select id="sleepQuality">
+        <option value="5">Energised and refreshed</option>
+        <option value="4">Somewhat rested</option>
+        <option value="3">Neutral</option>
+        <option value="2">Tired</option>
+        <option value="1">Exhausted</option>
+    </select>
+</div>
+<div class="form-group">
+    <label for="screenTime">Hours of screen time before bed</label>
+    <input type="number" id="screenTime" placeholder="Enter hours" min="0" max="12">
+</div>
+<button class="btn" onclick="calculateSleepScore()" style="width:100%"><i class="fas fa-moon"></i> Calculate Score</button>
+<div id="sleepScoreResult" class="result" style="display:none"></div>
+</div></div></section>
 <section id="how-it-works" style="background:var(--bg-alt)"><div class="container"><div class="section-header"><h2>How It Works</h2><p>Three simple steps to get started</p></div><div class="steps-grid"><div class="card step-card"><div class="step-number">1</div><h3>Track Your Sleep</h3><p>Use our app or connect wearables</p></div><div class="card step-card"><div class="step-number">2</div><h3>Get Analysis</h3><p>AI analyses your patterns</p></div><div class="card step-card"><div class="step-number">3</div><h3>Improve</h3><p>Personalised recommendations</p></div></div></div></section>
 <section><div class="container"><div class="section-header"><h2>Why Choose Us?</h2><p>Benefits that set us apart from the rest</p></div><div class="card-grid"><div class="card"><div class="card-icon"><i class="fas fa-heart-pulse"></i></div><h3>Better Health</h3><p>Quality sleep improves immunity and wellbeing.</p></div><div class="card"><div class="card-icon"><i class="fas fa-bolt"></i></div><h3>More Energy</h3><p>Wake up refreshed and stay productive.</p></div><div class="card"><div class="card-icon"><i class="fas fa-brain"></i></div><h3>Improved Focus</h3><p>Better concentration and memory.</p></div></div></div></section>
 <section style="background:var(--bg-alt)"><div class="container"><div class="section-header"><h2>What Our Clients Say</h2><p>Real results from real customers</p></div><div class="testimonial-grid"><div class="testimonial-card"><p class="testimonial-text">Finally sleeping through the night! The coaching changed my life.</p><div class="testimonial-author">Anna M.</div><div class="testimonial-role">Verified User</div></div><div class="testimonial-card"><p class="testimonial-text">The sleep tracker helped identify issues I didn't know I had.</p><div class="testimonial-author">Chris T.</div><div class="testimonial-role">Verified User</div></div><div class="testimonial-card"><p class="testimonial-text">Waking up energized for the first time in years. Thank you!</p><div class="testimonial-author">Rachel K.</div><div class="testimonial-role">Verified User</div></div></div></div></section>
 <section><div class="container"><div class="section-header"><h2>Featured Products</h2><p>Our most popular offerings</p></div><div class="product-grid"><div class="product-card"><img src="https://images.unsplash.com/photo-1511296933631-18b5f0bc084c?w=600&h=400&fit=crop" alt="Sleep Tracker Pro" class="product-image"><div class="product-content"><h3>Sleep Tracker Pro</h3><p>AI-powered sleep analysis.</p><a href="services.html" class="btn">Learn More</a></div></div><div class="product-card"><img src="https://images.unsplash.com/photo-1520206183501-b80df61043c2?w=600&h=400&fit=crop" alt="Premium Sleep Mask" class="product-image"><div class="product-content"><h3>Premium Sleep Mask</h3><p>Light-blocking for deeper sleep.</p><a href="services.html" class="btn">Learn More</a></div></div><div class="product-card"><img src="https://images.unsplash.com/photo-1522771753035-4850d32f7195?w=600&h=400&fit=crop" alt="Weighted Blanket" class="product-image"><div class="product-content"><h3>Weighted Blanket</h3><p>Therapeutic for anxiety-free sleep.</p><a href="services.html" class="btn">Learn More</a></div></div></div></div></section>
-<section style="background:var(--bg-alt)"><div class="container"><div class="section-header"><h2>Pricing Plans</h2><p>Choose the plan that works for you</p></div><div class="pricing-grid"><div class="pricing-card"><div class="pricing-name">Basic</div><div class="pricing-price">£0/mo<span>/mo</span></div><p class="pricing-desc">Track your sleep</p><ul class="pricing-features"><li>Basic Tracking</li><li>Sleep Score</li><li>Tips</li></ul><a href="contact.html" class="btn">Get Started</a></div><div class="pricing-card featured"><div class="pricing-name">Premium</div><div class="pricing-price">£14/mo<span>/mo</span></div><p class="pricing-desc">Full experience</p><ul class="pricing-features"><li>Advanced Analytics</li><li>Coaching Sessions</li><li>Product Discounts</li></ul><a href="contact.html" class="btn btn-secondary">Get Started</a></div><div class="pricing-card"><div class="pricing-name">VIP</div><div class="pricing-price">£49/mo<span>/mo</span></div><p class="pricing-desc">Everything included</p><ul class="pricing-features"><li>Unlimited Coaching</li><li>Wearable Sync</li><li>Priority Support</li></ul><a href="contact.html" class="btn">Get Started</a></div></div></div></section>
+<section style="background:var(--bg-alt)"><div class="container"><div class="section-header"><h2>Pricing Plans</h2><p>Choose the plan that works for you</p></div><div class="pricing-grid"><div class="pricing-card"><div class="pricing-name">Basic</div><div class="pricing-price">Â£0/mo<span>/mo</span></div><p class="pricing-desc">Track your sleep</p><ul class="pricing-features"><li>Basic Tracking</li><li>Sleep Score</li><li>Tips</li></ul><a href="contact.html" class="btn">Get Started</a></div><div class="pricing-card featured"><div class="pricing-name">Premium</div><div class="pricing-price">Â£14/mo<span>/mo</span></div><p class="pricing-desc">Full experience</p><ul class="pricing-features"><li>Advanced Analytics</li><li>Coaching Sessions</li><li>Product Discounts</li></ul><a href="contact.html" class="btn btn-secondary">Get Started</a></div><div class="pricing-card"><div class="pricing-name">VIP</div><div class="pricing-price">Â£49/mo<span>/mo</span></div><p class="pricing-desc">Everything included</p><ul class="pricing-features"><li>Unlimited Coaching</li><li>Wearable Sync</li><li>Priority Support</li></ul><a href="contact.html" class="btn">Get Started</a></div></div></div></section>
 <section class="cta-section"><div class="container"><h2>Ready to Get Started?</h2><p>Join thousands of satisfied customers today.</p><a href="contact.html" class="btn">Contact Us</a></div></section>
 
 <footer>
@@ -227,25 +248,30 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-function calculateSavings() {
-    var spendInput = document.getElementById('monthlySpend');
-    var catSelect = document.getElementById('productCategory');
-    var resultDiv = document.getElementById('savingsResult');
-    if (!spendInput || !catSelect || !resultDiv) return;
+function calculateSleepScore() {
+    var hours = parseFloat(document.getElementById('hoursSleep').value) || 0;
+    var quality = parseInt(document.getElementById('sleepQuality').value) || 3;
+    var screen = parseFloat(document.getElementById('screenTime').value) || 0;
     
-    var spend = parseFloat(spendInput.value) || 0;
-    var cat = catSelect.value;
-    var mult = 0.10;
-    if (cat === 'electronics') mult = 0.15;
-    else if (cat === 'clothing') mult = 0.12;
-    else if (cat === 'home') mult = 0.18;
-    else if (cat === 'food') mult = 0.10;
-    else if (cat === 'other') mult = 0.08;
+    // Calculate score (out of 100)
+    var hoursScore = Math.min(hours / 8 * 40, 40);
+    var qualityScore = quality * 8;
+    var screenPenalty = screen > 1 ? (screen - 1) * 5 : 0;
+    var totalScore = Math.round(hoursScore + qualityScore - screenPenalty);
+    totalScore = Math.max(0, Math.min(100, totalScore));
     
-    var annual = spend * 12 * mult;
-    var impact = (annual / 100) * 2.5;
-    
-    resultDiv.style.display = 'block';
-    resultDiv.innerHTML = '<div class="result-value">' + (spend > 0 ? '£' + annual.toFixed(0) : 'Enter amount') + '</div><div class="result-label">Estimated Annual Savings</div><div style="margin-top:20px;padding-top:20px;border-top:1px solid rgba(0,0,0,0.1)"><div class="result-value" style="font-size:1.75rem">' + impact.toFixed(1) + ' kg</div><div class="result-label">Environmental Impact per Year</div></div>';
+    var result = document.getElementById('sleepScoreResult');
+    if (result) {
+        var rating = totalScore >= 80 ? 'Excellent' : totalScore >= 60 ? 'Good' : totalScore >= 40 ? 'Fair' : 'Needs Work';
+        var color = totalScore >= 80 ? 'var(--primary)' : totalScore >= 60 ? '#f59e0b' : '#ef4444';
+        result.style.display = 'block';
+        result.innerHTML = '<div class="result-value" style="color:' + color + '">' + totalScore + '/100</div><div class="result-label">' + rating + ' Sleep Score</div><div style="margin-top:16px;font-size:0.9rem">' + getSleepRecommendation(totalScore) + '</div>';
+    }
 }
+function getSleepRecommendation(score) {
+    if (score >= 80) return "Great sleep habits! Keep it up!";
+    if (score >= 60) return "Good, but there's room for improvement.";
+    return "Try going to bed earlier and reducing screen time.";
+}
+
 </script></body></html>
